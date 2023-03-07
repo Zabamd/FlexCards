@@ -16,12 +16,85 @@
 .card {
   width: 10%;
   height: 100%;
-  background-color: green;
   border-radius: 50px;
   transition: width ease-in-out 0.4s, height ease-in-out 0.4s;
+  background-repeat: no-repeat;
 }
-.card_active{
-    height: 100%;
-    width: 60% ;
+.card_active {
+  height: 110%;
+  width: 60%;
+}
+.card_text,
+.card_header {
+  font-size: 0px;
+  opacity: 0;
+  transition: opacity ease-out 0.5s 0.25s;
+}
+.card_active > .card_header,
+.card_active > .card_text {
+  display: block;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin: 0 0 0 0.4rem;
+  padding: 0;
+  opacity: 1;
+}
+.card_active > .card_header {
+  font-size: 48px;
+  font-weight: bolder;
+  margin-top: 70%;
+}
+.card_active > .card_text {
+  font-size: 32px;
+  font-weight: bold;
 }
 
+.icon_wrapper {
+  background-color: white;
+  width: 5rem;
+  height: 5rem;
+  margin: 0.4rem;
+  border-radius: 100%;
+}
+.icon_wrapper > i {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+}
+.first_card > .icon_wrapper > i {
+  color: rgb(255, 238, 0);
+  text-shadow: 0px 0px 20px rgba(255, 238, 0, 0.5);
+}
+.second_card > .icon_wrapper > i {
+  color: rgb(56, 55, 55);
+  text-shadow: 0px 0px 20px rgba(56, 55, 55, 0.5);
+}
+
+.third_card > .icon_wrapper > i {
+  color: rgb(63, 184, 224);
+  text-shadow: 0px 0px 20px rgba(63, 184, 224, 0.5);
+}
+
+.fourth_card > .icon_wrapper > i {
+  color: rgb(255, 0, 0);
+  text-shadow: 0px 0px 20px rgba(255, 0, 0, 0.5);
+}
+
+.first_card {
+  background: url("./assets/Tower.jpg");
+  background-size: cover;
+}
+.second_card {
+  background: url("./assets/Truck.jpg");
+  background-size: cover;
+}
+.third_card {
+  background: url("./assets//Winter.jpg");
+  background-size: cover;
+}
+.fourth_card {
+  background: url("./assets/Woman.jpg");
+  background-size: cover;
+}
